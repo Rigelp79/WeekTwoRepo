@@ -33,7 +33,7 @@ var getFromDarkSky = function (latitude, longitude) {
         $(".printCon").empty().append(conDition);
         console.log(conDition);
 
-        var tEmp = data.currently.temperature;
+        var tEmp = data.currently.temperature + "&deg; F";
         $(".printTemp").empty().append(tEmp);
         console.log(tEmp);
 
@@ -52,20 +52,7 @@ var getFromDarkSky = function (latitude, longitude) {
         $(".print")
     });
 
-    $(function (data) {
-        var div = $("<div></div>");
-        var conDition = data.currently.summary;
-        div.append(conDition);
-        var tEmp = data.currently.temperature;
-        div.append(tEmp);
-        var preCip = data.currently.precipProbability;
-        div.append(preCip);
-        var minTemp = data.daily.data[0].temperatureMin;
-        div.append(minTemp);
-        var maxTemp = data.daily.data[0].temperatureMax;
-        div.append(maxTemp);
-        $("#zip").append(div);
-    });
+    
 
 }
 
