@@ -1,0 +1,15 @@
+
+
+API url
+https://maps.googleapis.com/maps/api/geocode/json?latlng=40.714224,-73.961452&key=AIzaSyDgTR-lywqWl_7MSAH5FvpV7QMBWTpsRJg
+
+API key:
+AIzaSyDgTR-lywqWl_7MSAH5FvpV7QMBWTpsRJg
+
+Dark Sky Weather API:
+
+API key:
+3cb454feee3d28662007fe5bef209096
+
+API url:
+https://api.darksky.net/forecast/3cb454feee3d28662007fe5bef209096/37.8267,-122.4233

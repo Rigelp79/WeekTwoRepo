@@ -1,0 +1,22 @@
+h2 {
+    color: blue;
+}
+body {
+    padding: 10em;
+}
+button {
+    margin: 2em 0;
+}
+.blue { color: blue; }
+#container {
+    background-color: #EFDEDF;
+    padding: 5em 2em;
+}
+span { color: red; }
+#friend div {
+    float: left;
+    margin: 1em;
+    padding: 1em;
+    height: 150px;
+    background-color: #eeeeee;
+}

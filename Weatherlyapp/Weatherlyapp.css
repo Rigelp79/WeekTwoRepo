@@ -1,0 +1,51 @@
+body {
+    background-color: papayawhip;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+.rainsnow{
+    background-color: dodgerblue;
+    background-size: 100% 100%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.snow{
+    background-color: deepskyblue;
+    background-size: 100% 100%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.rain{
+    background-color: indianred;
+    background-size: 100% 100%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.sunrain{
+    background-color: palevioletred;
+    background-size: 100% 100%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.inthesun{
+    background-color: lawngreen;
+    background-size: 100% 100%;
+    text-align: center;
+    border-radius: 20px;
+}
+
+.partsunny{
+    background-color: mediumspringgreen;
+    background-size: 100% 100%;
+    text-align: center;
+    border-radius: 20px;
+}
