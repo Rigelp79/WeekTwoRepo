@@ -4,6 +4,9 @@ $(function () {
         getFromGoogle(zipCode);
         $("#zip").val("");
     });
+    $("#clEar").click(function(){
+        location.reload();
+    })
 
 });
 
@@ -19,41 +22,30 @@ var getFromGoogle = function (zipCode) {
         var lon = data.results[0].geometry.location.lng;
         $(".printCity").empty().append(nameCity);
 
-        getFromDarkSky(lati, lon);
+        getFromDarkSky(lati, lon, nameCity);
     });
 }
 
 
-var getFromDarkSky = function (latitude, longitude) {
+var getFromDarkSky = function (latitude, longitude, nameCity) {
     var darkSkyKey = "3cb454feee3d28662007fe5bef209096";
     var darkSky = "https://api.darksky.net/forecast/" + darkSkyKey + "/" + latitude + "," + longitude;
     $.ajax(darkSky, { dataType: "jsonp" }).done(function (data) {
-
+        
+        var div = $("<div class='col-sm-6 col-md-4 rainsnow'></div>");
+        div.append("<p>" + nameCity + "</p>");
         var conDition = data.currently.summary;
-        $(".printCon").empty().append(conDition);
-        console.log(conDition);
-
-        var tEmp = data.currently.temperature + "&deg; F";
-        $(".printTemp").empty().append(tEmp);
-        console.log(tEmp);
-
+        div.append("<p>" + conDition + "</p>");
+        var tEmp = data.currently.temperature;
+        div.append("<p>temp " + tEmp + "&#8457</p>");
         var preCip = data.currently.precipProbability;
-        $(".printPrecip").empty().append(preCip);
-        console.log(preCip);
-
+        div.append("<p>precip " + preCip + "%</p>");
         var minTemp = data.daily.data[0].temperatureMin;
-        $(".printMinTemp").empty().append(minTemp);
-        console.log(minTemp);
-
-        var maxTemp = data.daily.data[0].temperatureMax
-        $(".printMaxTemp").empty().append(maxTemp);
-        console.log(maxTemp);
-
-        $(".print")
+        div.append("<p>min temp " + minTemp + "&#8457</p>");
+        var maxTemp = data.daily.data[0].temperatureMax;
+        div.append("<p>max temp " + maxTemp + "&#8457</p>");
+        $(".row").append(div);
     });
-
-    
-
 }
 
 
